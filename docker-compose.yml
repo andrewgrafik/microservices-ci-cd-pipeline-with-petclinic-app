@@ -7,6 +7,7 @@ services:
     mem_limit: 512M
     ports:
      - 8888:8888
+     
 
   discovery-server:
     image: springcommunity/spring-petclinic-discovery-server
