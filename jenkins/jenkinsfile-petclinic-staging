@@ -8,10 +8,10 @@ pipeline {
         AWS_REGION="us-east-1"
         ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
         
-        RANCHER_URL="https://rancher03.clarusway.us/v3"       // -----> this is the endpoint coming from rancher ui (avatar > API & KEY > Add Key > give a description > dont select a scope > Create)
+        RANCHER_URL="https://rancher03.anvarjon.net/v3"       // -----> this is the endpoint coming from rancher ui (avatar > API & KEY > Add Key > give a description > dont select a scope > Create)
 
         // Get the project-id from Rancher UI
-        RANCHER_CONTEXT="c-jwl98:p-kqtcf"  // -----> After creating a namespace in your application cluster, click on the menu icon (3 dots) of your newly created namespace. It s going to pop up a new small window. Click on "view API". It s going to open up a new page. Copy the value of the "ProjectId". This value will be assigned to RANCHER_CONTEXT variable...
+        RANCHER_CONTEXT="c-px9kp:p-nxn8j"  // -----> After creating a namespace in your application cluster, click on the menu icon (3 dots) of your newly created namespace. It s going to pop up a new small window. Click on "view API". It s going to open up a new page. Copy the value of the "ProjectId". This value will be assigned to RANCHER_CONTEXT variable...
         
         //This credentilas will come from jenkins. You should go to Dashboard > Manage Jenkins > Manage Credentials > Click on "Global" > Add Credentials > Username will be the API Key ,  Password will be the SECRET KEY. Give an id to the Credential. this id will be used as an arguement in the function below.
         RANCHER_CREDS=credentials('petclinic-key')
